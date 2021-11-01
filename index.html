@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>My name is Aseel Alshohatee and my favorite hobby is playing soccer with my friends.</h1>
+    <h3>
+        The current time is: <span id="time"> </span>
+
+    </h3>
+    <script type="text/javascript">
+        window.onload = function() {
+
+
+            myInterval = setInterval(getCurrentTime, 1000);
+
+
+
+
+        };
+
+        getCurrentTime();
+
+        function getCurrentTime() {
+            let date = new Date();
+            let h = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
+            let amOrpm = date.getHours() >= 12 ? "PM" : "AM";
+
+            h = h < 10 ? "0" + h : h;
+
+            let m = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+            let s = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+            time = h + ":" + m + ":" + s + " " + amOrpm;
+            let currentTime = document.getElementById("time");
+            currentTime.innerHTML = time;
+        };
+    </script>
+
+
+
+
+</body>
+
+</html>
