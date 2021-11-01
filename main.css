@@ -1,0 +1,13 @@
+#center {
+    margin-top: 20%;
+    margin-left: 30%;
+    margin-right: 30%;
+    font-family: arial;
+    outline: dashed 1px black;
+}
+
+h1,
+h3 {
+    /* Center horizontally*/
+    text-align: center;
+}
